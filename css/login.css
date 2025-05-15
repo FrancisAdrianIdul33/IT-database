@@ -1,0 +1,165 @@
+/* Login Page Styles */
+
+.login-main {
+    min-height: calc(100vh - 240px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(46, 139, 87, 0.05), rgba(46, 139, 87, 0.1));
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--text-light);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 25px var(--shadow-color);
+    overflow: hidden;
+}
+
+.login-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 16px;
+    background-color: var(--text-light);
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.tab-btn:not(.active):hover {
+    background-color: rgba(46, 139, 87, 0.05);
+    color: var(--primary-color);
+}
+
+.login-form-container {
+    padding: 30px;
+    position: relative;
+    min-height: 350px;
+}
+
+.login-form {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.login-form.active {
+    display: block;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(69, 176, 140, 0.1);
+}
+
+.login-options {
+    margin-top: 30px;
+}
+
+.btn-login, .btn-register {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-login:hover, .btn-register:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.register-link, .login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-muted);
+}
+
+.register-link a, .login-link a {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+}
+
+.register-link a:hover, .login-link a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    .login-container {
+        max-width: 100%;
+    }
+    
+    .login-form-container {
+        padding: 20px;
+    }
+    
+    .tab-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .form-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animation for login form transitions */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

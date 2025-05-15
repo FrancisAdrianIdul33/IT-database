@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Dahilayan Hotel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-hotel"></i>
+                <h1>Dahilayan Hotel</h1>
+            </div>
+            
+            <div class="admin-profile">
+                <div class="admin-avatar">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div class="admin-info">
+                    <h3 id="admin-name">Admin User</h3>
+                    <p id="admin-email">admin@dahilayanhotel.com</p>
+                </div>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active" data-tab="dashboard">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span>Dashboard</span>
+                    </li>
+                    <li data-tab="reservations">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Reservations</span>
+                    </li>
+                    <li data-tab="rooms">
+                        <i class="fa-solid fa-bed"></i>
+                        <span>Manage Rooms</span>
+                    </li>
+                    <li data-tab="users">
+                        <i class="fa-solid fa-users"></i>
+                        <span>User Management</span>
+                    </li>
+                    <li data-tab="payments">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Payments</span>
+                    </li>
+                    <li data-tab="reports">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Reports</span>
+                    </li>
+                    <li data-tab="settings">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="admin-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="toggle-sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <h2>Admin Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="admin-notifications">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="admin-content">
+                <!-- Dashboard Tab -->
+                <section id="dashboard" class="content-tab active">
+                    <div class="dashboard-summary">
+                        <div class="summary-card">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>42</h3>
+                                <p>Active Reservations</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>18</h3>
+                                <p>Available Rooms</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>156</h3>
+                                <p>Registered Users</p>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-peso-sign"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>₱358,750</h3>
+                                <p>Monthly Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-charts">
+                        <div class="chart-container">
+                            <h3>Reservation Statistics</h3>
+                            <div class="chart-placeholder">
+                                <p>Reservation chart goes here</p>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Revenue Overview</h3>
+                            <div class="chart-placeholder">
+                                <p>Revenue chart goes here</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-activities">
+                        <h3>Recent Activities</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fa-solid fa-calendar-plus"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <h4>New Reservation</h4>
+                                    <p>Executive Suite booked by Maria Santos for May 15-18</p>
+                                    <span class="activity-time">10 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <h4>Payment Received</h4>
+                                    <p>₱15,600 payment for Reservation #RS-2025-0426</p>
+                                    <span class="activity-time">45 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <h4>New User Registration</h4>
+                                    <p>John Dela Cruz registered a new account</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fa-solid fa-calendar-xmark"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <h4>Reservation Canceled</h4>
+                                    <p>Reservation #RS-2025-0418 was canceled</p>
+                                    <span class="activity-time">Yesterday</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Reservations Tab -->
+                <section id="reservations" class="content-tab">
+                    <div class="section-header">
+                        <h2>Manage Reservations</h2>
+                        <div class="header-actions">
+                            <div class="filter-container">
+                                <select id="reservation-filter">
+                                    <option value="all">All Reservations</option>
+                                    <option value="upcoming">Upcoming</option>
+                                    <option value="active">Active</option>
+                                    <option value="completed">Completed</option>
+                                    <option value="canceled">Canceled</option>
+                                </select>
+                            </div>
+                            <button class="btn-add-new">
+                                <i class="fa-solid fa-plus"></i> New Reservation
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Reservation ID</th>
+                                    <th>Guest Name</th>
+                                    <th>Room</th>
+                                    <th>Check-in</th>
+                                    <th>Check-out</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RS-2025-0428</td>
+                                    <td>Maria Santos</td>
+                                    <td>Executive Suite</td>
+                                    <td>May 15, 2025</td>
+                                    <td>May 18, 2025</td>
+                                    <td>₱15,600</td>
+                                    <td><span class="status-upcoming">Upcoming</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RS-2025-0427</td>
+                                    <td>John Dela Cruz</td>
+                                    <td>Deluxe Room</td>
+                                    <td>Apr 30, 2025</td>
+                                    <td>May 2, 2025</td>
+                                    <td>₱7,000</td>
+                                    <td><span class="status-active">Active</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RS-2025-0426</td>
+                                    <td>Pedro Reyes</td>
+                                    <td>Family Suite</td>
+                                    <td>Apr 25, 2025</td>
+                                    <td>Apr 29, 2025</td>
+                                    <td>₱27,200</td>
+                                    <td><span class="status-completed">Completed</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RS-2025-0425</td>
+                                    <td>Anna Garcia</td>
+                                    <td>Presidential Suite</td>
+                                    <td>Apr 20, 2025</td>
+                                    <td>Apr 23, 2025</td>
+                                    <td>₱25,500</td>
+                                    <td><span class="status-completed">Completed</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RS-2025-0418</td>
+                                    <td>Carlos Lim</td>
+                                    <td>Deluxe Room</td>
+                                    <td>Apr 15, 2025</td>
+                                    <td>Apr 17, 2025</td>
+                                    <td>₱7,000</td>
+                                    <td><span class="status-canceled">Canceled</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="page-numbers">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <span>...</span>
+                            <button>10</button>
+                        </div>
+                        <button class="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </section>
+                
+                <!-- Rooms Tab -->
+                <section id="rooms" class="content-tab">
+                    <div class="section-header">
+                        <h2>Manage Rooms</h2>
+                        <div class="header-actions">
+                            <div class="filter-container">
+                                <select id="room-filter">
+                                    <option value="all">All Room Types</option>
+                                    <option value="deluxe">Deluxe Room</option>
+                                    <option value="executive">Executive Suite</option>
+                                    <option value="family">Family Suite</option>
+                                    <option value="presidential">Presidential Suite</option>
+                                </select>
+                            </div>
+                            <button class="btn-add-new">
+                                <i class="fa-solid fa-plus"></i> Add New Room
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Room Number</th>
+                                    <th>Room Type</th>
+                                    <th>Price (₱)</th>
+                                    <th>Capacity</th>
+                                    <th>Status</th>
+                                    <th>Last Cleaned</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>101</td>
+                                    <td>Deluxe Room</td>
+                                    <td>3,500</td>
+                                    <td>2</td>
+                                    <td><span class="status-available">Available</span></td>
+                                    <td>Apr 29, 2025</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>102</td>
+                                    <td>Deluxe Room</td>
+                                    <td>3,500</td>
+                                    <td>2</td>
+                                    <td><span class="status-occupied">Occupied</span></td>
+                                    <td>Apr 30, 2025</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>201</td>
+                                    <td>Executive Suite</td>
+                                    <td>5,200</td>
+                                    <td>3</td>
+                                    <td><span class="status-available">Available</span></td>
+                                    <td>Apr 28, 2025</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>301</td>
+                                    <td>Family Suite</td>
+                                    <td>6,800</td>
+                                    <td>5</td>
+                                    <td><span class="status-maintenance">Maintenance</span></td>
+                                    <td>Apr 27, 2025</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>Presidential Suite</td>
+                                    <td>8,500</td>
+                                    <td>4</td>
+                                    <td><span class="status-reserved">Reserved</span></td>
+                                    <td>Apr 30, 2025</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="page-numbers">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                        </div>
+                        <button class="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </section>
+                
+                <!-- Users Tab -->
+                <section id="users" class="content-tab">
+                    <div class="section-header">
+                        <h2>User Management</h2>
+                        <div class="header-actions">
+                            <div class="filter-container">
+                                <select id="user-filter">
+                                    <option value="all">All Users</option>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+                            <button class="btn-add-new">
+                                <i class="fa-solid fa-plus"></i> Add New User
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Status</th>
+                                    <th>Reservations</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Maria Santos</td>
+                                    <td>maria.santos@email.com</td>
+                                    <td>+63 917 1234567</td>
+                                    <td><span class="status-active">Active</span></td>
+                                    <td>3</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>John Dela Cruz</td>
+                                    <td>john.dc@email.com</td>
+                                    <td>+63 918 9876543</td>
+                                    <td><span class="status-active">Active</span></td>
+                                    <td>1</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Pedro Reyes</td>
+                                    <td>pedro.reyes@email.com</td>
+                                    <td>+63 919 4567890</td>
+                                    <td><span class="status-active">Active</span></td>
+                                    <td>5</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>Anna Garcia</td>
+                                    <td>anna.garcia@email.com</td>
+                                    <td>+63 920 1122334</td>
+                                    <td><span class="status-active">Active</span></td>
+                                    <td>2</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>005</td>
+                                    <td>Carlos Lim</td>
+                                    <td>carlos.lim@email.com</td>
+                                    <td>+63 921 5566778</td>
+                                    <td><span class="status-inactive">Inactive</span></td>
+                                    <td>0</td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="page-numbers">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <span>...</span>
+                            <button>15</button>
+                        </div>
+                        <button class="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </section>
+                
+                <!-- Payments Tab -->
+                <section id="payments" class="content-tab">
+                    <div class="section-header">
+                        <h2>Payment Management</h2>
+                        <div class="header-actions">
+                            <div class="filter-container">
+                                <select id="payment-filter">
+                                    <option value="all">All Payments</option>
+                                    <option value="successful">Successful</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="failed">Failed</option>
+                                    <option value="refunded">Refunded</option>
+                                </select>
+                            </div>
+                            <button class="btn-add-new">
+                                <i class="fa-solid fa-plus"></i> Add Payment
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Payment ID</th>
+                                    <th>Reservation ID</th>
+                                    <th>Guest Name</th>
+                                    <th>Amount (₱)</th>
+                                    <th>Method</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PY-2025-0125</td>
+                                    <td>RS-2025-0428</td>
+                                    <td>Maria Santos</td>
+                                    <td>15,600</td>
+                                    <td>Credit Card</td>
+                                    <td>Apr 30, 2025</td>
+                                    <td><span class="status-successful">Successful</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-receipt"><i class="fa-solid fa-file-invoice"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PY-2025-0124</td>
+                                    <td>RS-2025-0427</td>
+                                    <td>John Dela Cruz</td>
+                                    <td>7,000</td>
+                                    <td>GCash</td>
+                                    <td>Apr 28, 2025</td>
+                                    <td><span class="status-successful">Successful</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-receipt"><i class="fa-solid fa-file-invoice"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PY-2025-0123</td>
+                                    <td>RS-2025-0426</td>
+                                    <td>Pedro Reyes</td>
+                                    <td>27,200</td>
+                                    <td>PayPal</td>
+                                    <td>Apr 23, 2025</td>
+                                    <td><span class="status-successful">Successful</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-receipt"><i class="fa-solid fa-file-invoice"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PY-2025-0122</td>
+                                    <td>RS-2025-0425</td>
+                                    <td>Anna Garcia</td>
+                                    <td>25,500</td>
+                                    <td>Credit Card</td>
+                                    <td>Apr 18, 2025</td>
+                                    <td><span class="status-successful">Successful</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-receipt"><i class="fa-solid fa-file-invoice"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PY-2025-0121</td>
+                                    <td>RS-2025-0418</td>
+                                    <td>Carlos Lim</td>
+                                    <td>7,000</td>
+                                    <td>GCash</td>
+                                    <td>Apr 13, 2025</td>
+                                    <td><span class="status-refunded">Refunded</span></td>
+                                    <td>
+                                        <button class="btn-view"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-receipt"><i class="fa-solid fa-file-invoice"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="page-numbers">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <span>...</span>
+                            <button>12</button>
+                        </div>
+                        <button class="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </section>
+                
+                <!-- Additional tabs (reports, settings) hidden for brevity -->
+                <section id="reports" class="content-tab">
+                    <h2>Reports</h2>
+                    <p>Reports section content here...</p>
+                </section>
+                
+                <section id="settings" class="content-tab">
+                    <h2>Settings</h2>
+                    <p>Settings section content here...</p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

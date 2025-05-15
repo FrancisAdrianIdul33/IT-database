@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Dahilayan Hotel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rooms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <i class="fa-solid fa-hotel"></i>
+                <h1>Dahilayan Hotel</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html" class="active">Rooms</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-profile">
+                <span id="user-name">Guest</span>
+                <div class="profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="login.html">Login</a>
+                    <a href="#" id="logout-btn" style="display: none;">Logout</a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rooms-banner">
+            <h1>Our Rooms & Suites</h1>
+            <p>Experience comfort and luxury in our thoughtfully designed accommodations</p>
+        </section>
+
+        <section class="booking-search">
+            <div class="search-container">
+                <h2>Find Your Perfect Room</h2>
+                <form id="booking-search-form">
+                    <div class="search-inputs">
+                        <div class="form-group">
+                            <label for="check-in">Check-in Date</label>
+                            <input type="date" id="check-in" name="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Check-out Date</label>
+                            <input type="date" id="check-out" name="check-out" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6+ Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-search">Search Availability</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="rooms-list">
+            <div class="room-item">
+                <div class="room-image">
+                    <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg" alt="Deluxe Room">
+                    <div class="room-price">₱3,500<span>/night</span></div>
+                </div>
+                <div class="room-info">
+                    <h2>Deluxe Room</h2>
+                    <div class="room-features">
+                        <span><i class="fa-solid fa-user"></i> 2 Guests</span>
+                        <span><i class="fa-solid fa-bed"></i> King Bed</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 32 sqm</span>
+                        <span><i class="fa-solid fa-mountain"></i> Mountain View</span>
+                    </div>
+                    <p class="room-description">Our Deluxe Room offers a comfortable space with a king-sized bed, modern amenities, and a private balcony with stunning mountain views. Perfect for couples or business travelers.</p>
+                    <ul class="room-amenities">
+                        <li><i class="fa-solid fa-wifi"></i> Free Wi-Fi</li>
+                        <li><i class="fa-solid fa-tv"></i> 40" Smart TV</li>
+                        <li><i class="fa-solid fa-shower"></i> Rain Shower</li>
+                        <li><i class="fa-solid fa-mug-hot"></i> Coffee Maker</li>
+                        <li><i class="fa-solid fa-snowflake"></i> Air Conditioning</li>
+                    </ul>
+                    <button class="btn-book-room" data-room-id="1" data-room-type="Deluxe Room" data-room-price="3500">Book This Room</button>
+                </div>
+            </div>
+
+            <div class="room-item">
+                <div class="room-image">
+                    <img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg" alt="Executive Suite">
+                    <div class="room-price">₱5,200<span>/night</span></div>
+                </div>
+                <div class="room-info">
+                    <h2>Executive Suite</h2>
+                    <div class="room-features">
+                        <span><i class="fa-solid fa-user"></i> 2-3 Guests</span>
+                        <span><i class="fa-solid fa-bed"></i> King Bed</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 48 sqm</span>
+                        <span><i class="fa-solid fa-mountain"></i> Panoramic View</span>
+                    </div>
+                    <p class="room-description">Our Executive Suite features a separate living area, premium furnishings, and a spacious bathroom with a bathtub. Enjoy panoramic views of the mountains and valley from your private terrace.</p>
+                    <ul class="room-amenities">
+                        <li><i class="fa-solid fa-wifi"></i> Free Wi-Fi</li>
+                        <li><i class="fa-solid fa-tv"></i> 55" Smart TV</li>
+                        <li><i class="fa-solid fa-bath"></i> Bathtub & Shower</li>
+                        <li><i class="fa-solid fa-martini-glass"></i> Mini Bar</li>
+                        <li><i class="fa-solid fa-couch"></i> Lounge Area</li>
+                        <li><i class="fa-solid fa-snowflake"></i> Air Conditioning</li>
+                    </ul>
+                    <button class="btn-book-room" data-room-id="2" data-room-type="Executive Suite" data-room-price="5200">Book This Room</button>
+                </div>
+            </div>
+
+            <div class="room-item">
+                <div class="room-image">
+                    <img src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg" alt="Family Suite">
+                    <div class="room-price">₱6,800<span>/night</span></div>
+                </div>
+                <div class="room-info">
+                    <h2>Family Suite</h2>
+                    <div class="room-features">
+                        <span><i class="fa-solid fa-user"></i> 4-5 Guests</span>
+                        <span><i class="fa-solid fa-bed"></i> 2 Bedrooms</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 75 sqm</span>
+                        <span><i class="fa-solid fa-mountain"></i> Garden & Mountain View</span>
+                    </div>
+                    <p class="room-description">Perfect for families, this suite offers two bedrooms, a spacious living area, and a dining corner. The master bedroom has a king-sized bed, while the second bedroom has two single beds. Includes children's amenities upon request.</p>
+                    <ul class="room-amenities">
+                        <li><i class="fa-solid fa-wifi"></i> Free Wi-Fi</li>
+                        <li><i class="fa-solid fa-tv"></i> Multiple TVs</li>
+                        <li><i class="fa-solid fa-bath"></i> 2 Bathrooms</li>
+                        <li><i class="fa-solid fa-utensils"></i> Dining Area</li>
+                        <li><i class="fa-solid fa-martini-glass"></i> Mini Bar</li>
+                        <li><i class="fa-solid fa-snowflake"></i> Air Conditioning</li>
+                    </ul>
+                    <button class="btn-book-room" data-room-id="3" data-room-type="Family Suite" data-room-price="6800">Book This Room</button>
+                </div>
+            </div>
+
+            <div class="room-item">
+                <div class="room-image">
+                    <img src="https://images.pexels.com/photos/6186815/pexels-photo-6186815.jpeg" alt="Presidential Suite">
+                    <div class="room-price">₱8,500<span>/night</span></div>
+                </div>
+                <div class="room-info">
+                    <h2>Presidential Suite</h2>
+                    <div class="room-features">
+                        <span><i class="fa-solid fa-user"></i> 2-4 Guests</span>
+                        <span><i class="fa-solid fa-bed"></i> King Bed & Sofa Bed</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 95 sqm</span>
+                        <span><i class="fa-solid fa-mountain"></i> 360° Panoramic View</span>
+                    </div>
+                    <p class="room-description">Our most luxurious accommodation features elegant furnishings, a separate living and dining area, a private terrace with panoramic views, and exclusive amenities. Includes butler service and airport transfers.</p>
+                    <ul class="room-amenities">
+                        <li><i class="fa-solid fa-wifi"></i> Premium Wi-Fi</li>
+                        <li><i class="fa-solid fa-tv"></i> 65" Smart TV</li>
+                        <li><i class="fa-solid fa-bath"></i> Jacuzzi & Shower</li>
+                        <li><i class="fa-solid fa-utensils"></i> Dining Area</li>
+                        <li><i class="fa-solid fa-martini-glass"></i> Premium Mini Bar</li>
+                        <li><i class="fa-solid fa-bell-concierge"></i> Butler Service</li>
+                        <li><i class="fa-solid fa-car"></i> Airport Transfer</li>
+                    </ul>
+                    <button class="btn-book-room" data-room-id="4" data-room-type="Presidential Suite" data-room-price="8500">Book This Room</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Modal -->
+        <div id="booking-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Complete Your Reservation</h2>
+                <form id="booking-form">
+                    <input type="hidden" id="room-id" name="room-id">
+                    
+                    <div class="booking-details">
+                        <div class="reservation-summary">
+                            <h3>Reservation Summary</h3>
+                            <p><strong>Room Type:</strong> <span id="selected-room-type"></span></p>
+                            <p><strong>Price Per Night:</strong> ₱<span id="selected-room-price"></span></p>
+                            <p><strong>Check-in Date:</strong> <span id="summary-check-in"></span></p>
+                            <p><strong>Check-out Date:</strong> <span id="summary-check-out"></span></p>
+                            <p><strong>Number of Nights:</strong> <span id="summary-nights"></span></p>
+                            <p><strong>Number of Guests:</strong> <span id="summary-guests"></span></p>
+                            <p class="total-amount"><strong>Total Amount:</strong> ₱<span id="summary-total"></span></p>
+                        </div>
+                        
+                        <div class="guest-details">
+                            <h3>Guest Information</h3>
+                            <div class="form-group">
+                                <label for="guest-name">Full Name</label>
+                                <input type="text" id="guest-name" name="guest-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guest-email">Email Address</label>
+                                <input type="email" id="guest-email" name="guest-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guest-phone">Phone Number</label>
+                                <input type="tel" id="guest-phone" name="guest-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="special-requests">Special Requests</label>
+                                <textarea id="special-requests" name="special-requests"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-details">
+                        <h3>Payment Information</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="payment-cc" name="payment-method" value="credit-card" checked>
+                                <label for="payment-cc">Credit/Debit Card</label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="payment-gcash" name="payment-method" value="gcash">
+                                <label for="payment-gcash">GCash</label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="payment-paypal" name="payment-method" value="paypal">
+                                <label for="payment-paypal">PayPal</label>
+                            </div>
+                        </div>
+                        
+                        <div id="cc-details" class="payment-form">
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name" name="card-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">Expiry Date</label>
+                                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvv">CVV</label>
+                                    <input type="text" id="card-cvv" name="card-cvv" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="gcash-details" class="payment-form">
+                            <p>You'll be redirected to GCash to complete your payment after confirming your booking.</p>
+                        </div>
+                        
+                        <div id="paypal-details" class="payment-form">
+                            <p>You'll be redirected to PayPal to complete your payment after confirming your booking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel">Cancel</button>
+                        <button type="submit" class="btn-confirm">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Booking Confirmation Modal -->
+        <div id="confirmation-modal" class="modal">
+            <div class="modal-content confirmation-content">
+                <span class="close-modal">&times;</span>
+                <div class="confirmation-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>Booking Confirmed!</h2>
+                <p>Your reservation has been successfully booked. A confirmation email has been sent to your email address.</p>
+                <div class="confirmation-details">
+                    <p><strong>Reservation ID:</strong> <span id="confirmation-id"></span></p>
+                    <p><strong>Room:</strong> <span id="confirmation-room"></span></p>
+                    <p><strong>Check-in:</strong> <span id="confirmation-checkin"></span></p>
+                    <p><strong>Check-out:</strong> <span id="confirmation-checkout"></span></p>
+                    <p><strong>Total Amount:</strong> ₱<span id="confirmation-amount"></span></p>
+                </div>
+                <button class="btn-close-confirmation">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Dahilayan, Bukidnon, Philippines</p>
+                <p><i class="fa-solid fa-phone"></i> +63 (88) 123-4567</p>
+                <p><i class="fa-solid fa-envelope"></i> info@dahilayanhotel.com</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dahilayan Hotel Reservation System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+</body>
+</html>
