@@ -173,10 +173,6 @@ header {
     padding: 10px 0;
     display: none;
     z-index: 1000;
-}
-
-.nav-profile:hover .dropdown-menu {
-    display: block;
     animation: fadeIn 0.3s ease;
 }
 
@@ -185,7 +181,7 @@ header {
     padding: 8px 15px;
     color: var(--text-dark);
     transition: background-color var(--transition-speed) ease;
-    cursor: pointer;
+    cursor: default;
 }
 
 .dropdown-menu a:hover,
@@ -193,6 +189,7 @@ header {
     background-color: rgba(46, 139, 87, 0.1);
     color: var(--primary-color);
 }
+
 
 .hamburger {
     display: none;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -21,15 +24,22 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="nav-profile">
+
+
+            <div class="nav-profile" id="navProfile">
                 <span id="user-name">Guest</span>
                 <div class="profile-icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" id="dropdownMenu">
                     <a href="login.html">Login</a>
                     <a href="#" id="logout-btn" style="display: none;">Logout</a>
                 </div>
+            </div>
+
+
+
+
             </div>
             <div class="hamburger">
                 <div class="bar"></div>
@@ -43,7 +53,8 @@
         <section class="hero-banner">
             <div class="hero-content">
                 <h1 class="hero-title">Experience Luxury in the Mountains</h1>
-                <p class="hero-description">Discover the perfect blend of comfort and nature at Dahilayan Hotel. Nestled in the lush mountains with panoramic views and world-class amenities.</p>
+                <p class="hero-description">Discover the perfect blend of comfort and nature at Dahilayan Hotel. Nestled
+                    in the lush mountains with panoramic views and world-class amenities.</p>
                 <a href="rooms.html" class="btn-book-now">Book Now</a>
             </div>
         </section>
@@ -64,7 +75,8 @@
                     </div>
                     <div class="room-card">
                         <div class="room-price">₱5,200</div>
-                        <img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg" alt="Executive Suite">
+                        <img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg"
+                            alt="Executive Suite">
                         <div class="room-details">
                             <h3>Executive Suite</h3>
                             <p>Luxury suite with separate living area, premium amenities, and panoramic views.</p>
@@ -74,20 +86,24 @@
                     </div>
                     <div class="room-card">
                         <div class="room-price">₱6,800</div>
-                        <img src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg" alt="Family Suite">
+                        <img src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg"
+                            alt="Family Suite">
                         <div class="room-details">
                             <h3>Family Suite</h3>
-                            <p>Perfect for families with two bedrooms, spacious living area, and children's amenities.</p>
+                            <p>Perfect for families with two bedrooms, spacious living area, and children's amenities.
+                            </p>
                             <p class="room-pax"><i class="fa-solid fa-user"></i> 4-5 Guests</p>
                             <a href="rooms.html" class="btn-view-details">View Details</a>
                         </div>
                     </div>
                     <div class="room-card">
                         <div class="room-price">₱8,500</div>
-                        <img src="https://images.pexels.com/photos/6186815/pexels-photo-6186815.jpeg" alt="Presidential Suite">
+                        <img src="https://images.pexels.com/photos/6186815/pexels-photo-6186815.jpeg"
+                            alt="Presidential Suite">
                         <div class="room-details">
                             <h3>Presidential Suite</h3>
-                            <p>Our finest accommodation with luxury furnishings, butler service, and private balcony.</p>
+                            <p>Our finest accommodation with luxury furnishings, butler service, and private balcony.
+                            </p>
                             <p class="room-pax"><i class="fa-solid fa-user"></i> 2-4 Guests</p>
                             <a href="rooms.html" class="btn-view-details">View Details</a>
                         </div>
@@ -100,7 +116,8 @@
                     <div class="reason-card">
                         <i class="fa-solid fa-location-dot"></i>
                         <h3>Prime Location</h3>
-                        <p>Located in the heart of Dahilayan with breathtaking mountain views and easy access to attractions.</p>
+                        <p>Located in the heart of Dahilayan with breathtaking mountain views and easy access to
+                            attractions.</p>
                     </div>
                     <div class="reason-card">
                         <i class="fa-solid fa-star"></i>
@@ -122,7 +139,9 @@
             </div>
             <div class="about-content">
                 <h2 class="section-title">About Dahilayan Hotel</h2>
-                <p>Established in 2010, Dahilayan Hotel combines modern luxury with the natural beauty of the Philippine highlands. Our commitment to exceptional service and sustainable practices has made us a premier destination for travelers seeking both adventure and relaxation.</p>
+                <p>Established in 2010, Dahilayan Hotel combines modern luxury with the natural beauty of the Philippine
+                    highlands. Our commitment to exceptional service and sustainable practices has made us a premier
+                    destination for travelers seeking both adventure and relaxation.</p>
                 <a href="about.html" class="btn-read-more">Read More</a>
             </div>
         </section>
@@ -163,4 +182,23 @@
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
 </body>
+
+<script>
+    const navProfile = document.getElementById('navProfile');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    let hideTimeout;
+
+    navProfile.addEventListener('mouseenter', () => {
+        clearTimeout(hideTimeout); // cancel previous hide timer
+        dropdownMenu.style.display = 'block';
+    });
+
+    navProfile.addEventListener('mouseleave', () => {
+        hideTimeout = setTimeout(() => {
+            dropdownMenu.style.display = 'none';
+        }, 10000); // hide after 10 seconds
+    });
+</script>
+
+
 </html>
